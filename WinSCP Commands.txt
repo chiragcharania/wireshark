@@ -1,0 +1,23 @@
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab-1.sjtu.edu.cn:cc/node1_1_log.txt /home1/s/c/cc477122/Project2/NodeData 
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@pl1.rcc.uottawa.ca:cc/node1_2_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab2.cs.purdue.edu:cc/node1_3_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab3.cs.uoregon.edu:cc/node1_4_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab2.ie.cuhk.edu.hk:cc/node2_1_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab3.rutgers.edu:cc/node2_2_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab-2.calpoly-netlab.net:cc/node2_3_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@plab1.cs.msu.ru:cc/node2_4_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab1.ie.cuhk.edu.hk:cc/node3_1_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab5.eecs.umich.edu:cc/node3_2_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab01.cs.washington.edu:cc/node3_3_log.txt /home1/s/c/cc477122/Project2/NodeData
+
+scp -i ~/.ssh/cc477122_rsa albany_ccn8@planetlab-n1.wand.net.nz:cc/node3_4_log.txt /home1/s/c/cc477122/Project2/NodeData

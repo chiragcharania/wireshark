@@ -1,0 +1,96 @@
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node1 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node1.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node2 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node2.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node3 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node3.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node4 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node4.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node5 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node5.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node6 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node6.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node7 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node7.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node8 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node8.txt
+
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node9 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node9.txt
+
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node10 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node10.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node11 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node11.txt
+	  
+cat /home1/s/c/cc477122/Project2/packet_loss/packetloss_node12 | awk -v RS='[[:space:]]+' \
+     '{ n[$1]++ };
+      END {
+        for (i in n) {
+          print i":",n[i]
+        }
+      }' >> /home1/s/c/cc477122/Project2/packet_loss/packetlossfreq_node12.txt
+

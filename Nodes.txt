@@ -1,0 +1,17 @@
+Group 1:
+planetlab-1.sjtu.edu.cn
+pl1.rcc.uottawa.ca
+planetlab2.cs.purdue.edu
+planetlab3.cs.uoregon.edu
+
+Group 2:
+planetlab2.ie.cuhk.edu.hk
+planetlab3.rutgers.edu
+planetlab-2.calpoly-netlab.net
+plab1.cs.msu.ru
+
+Group 3:
+planetlab1.ie.cuhk.edu.hk
+planetlab5.eecs.umich.edu
+planetlab01.cs.washington.edu
+planetlab-n1.wand.net.nz

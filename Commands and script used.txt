@@ -1,0 +1,360 @@
+Group 1:
+1.	planetlab-1.sjtu.edu.cn (China):
+
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab-1.sjtu.edu.cn
+
+mkdir cc
+
+cd cc
+
+vim my_script.sh
+#!/bin/bash
+declare -a hostName=("pl1.rcc.uottawa.ca" "planetlab2.cs.purdue.edu" "planetlab3.cs.uoregon.edu");
+while [ 1 ]; do
+date
+for i in "${hostName[@]}"
+do
+printf "\n"
+printf "Ping from planetlab-1.sjtu.edu.cn:"
+ping -c 20 $i
+printf "\n"
+printf "Traceroute from planetlab-1.sjtu.edu.cn:"
+traceroute $i
+done
+sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node1_1_log.txt
+
+
+2.	pl1.rcc.uottawa.ca (Canada)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa pl1.rcc.uottawa.ca
+
+mkdir cc
+
+cd cc
+
+#!/bin/bash
+declare -a hostName=("planetlab2.cs.purdue.edu" " planetlab3.cs.uoregon.edu " "planetlab-1.sjtu.edu.cn")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from pl1.rcc.uottawa.ca:"
+    ping -c 20 $i
+    printf "\n"
+    printf "Traceroute from pl1.rcc.uottawa.ca:"
+    traceroute $i
+    done
+      sleep 1300
+done
+
+chmod +x my_script.sh
+
+nohup ./my_script.sh
+
+setsid ./my_script.sh > node1_2_log.txt
+
+
+3.	planetlab2.cs.purdue.edu (USA East)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab2.cs.purdue.edu
+
+vi my_script.sh
+#!/bin/bash
+
+mkdir cc
+
+cd cc
+
+declare -a hostName=(" pl1.rcc.uottawa.ca " "planetlab3.cs.uoregon.edu " "planetlab-1.sjtu.edu.cn")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab2.cs.purdue.edu:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab2.cs.purdue.edu:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node1_3_log.txt
+
+
+4.	planetlab3.cs.uoregon.edu (USA West)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab3.cs.uoregon.edu
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=(" pl1.rcc.uottawa.ca " " planetlab2.cs.purdue.edu" "planetlab-1.sjtu.edu.cn")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab3.cs.uoregon.edu:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab3.cs.uoregon.edu:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node1_4_log.txt
+
+
+Group 2:
+1.	planetlab2.ie.cuhk.edu.hk (HK)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab2.ie.cuhk.edu.hk
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab3.rutgers.edu" "planetlab-2.calpoly-netlab.net" "plab1.cs.msu.ru")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab2.ie.cuhk.edu.hk:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab2.ie.cuhk.edu.hk:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node2_1_log.txt
+
+
+2.	planetlab3.rutgers.edu (USA East)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab3.rutgers.edu
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab2.ie.cuhk.edu.hk" "planetlab-2.calpoly-netlab.net" "plab1.cs.msu.ru")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab3.rutgers.edu:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab3.rutgers.edu:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node2_2_log.txt
+
+
+3.	planetlab-2.calpoly-netlab.net (USA West)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab-2.calpoly-netlab.net
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab2.ie.cuhk.edu.hk" "planetlab3.rutgers.edu" "plab1.cs.msu.ru")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab-2.calpoly-netlab.net:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab-2.calpoly-netlab.net:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node2_3_log.txt
+
+
+4.	plab1.cs.msu.ru (Russia)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa plab1.cs.msu.ru
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab2.ie.cuhk.edu.hk" "planetlab3.rutgers.edu" "planetlab-2.calpoly-netlab.net")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from plab1.cs.msu.ru:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from plab1.cs.msu.ru:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node2_4_log.txt
+
+
+Group 3:
+1.	planetlab1.ie.cuhk.edu.hk (HK)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab1.ie.cuhk.edu.hk
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab5.eecs.umich.edu" "planetlab01.cs.washington.edu" "planetlab-n1.wand.net.nz")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab1.ie.cuhk.edu.hk:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab1.ie.cuhk.edu.hk:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node3_1_log.txt
+
+
+2.	planetlab5.eecs.umich.edu (USA East)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab5.eecs.umich.edu
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab1.ie.cuhk.edu.hk" "planetlab01.cs.washington.edu" "planetlab-n1.wand.net.nz")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab5.eecs.umich.edu:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab5.eecs.umich.edu:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node3_2_log.txt
+
+
+3.	planetlab01.cs.washington.edu (USA West)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab01.cs.washington.edu
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab1.ie.cuhk.edu.hk" "planetlab5.eecs.umich.edu" "planetlab-n1.wand.net.nz")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab01.cs.washington.edu:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab01.cs.washington.edu:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node3_3_log.txt
+
+
+4.	planetlab-n1.wand.net.nz (NZ)
+ssh -v -l albany_ccn8 -i ~/.ssh/id_rsa planetlab-n1.wand.net.nz
+
+mkdir cc
+
+cd cc
+
+vi my_script.sh
+#!/bin/bash
+declare -a hostName=("planetlab1.ie.cuhk.edu.hk" "planetlab5.eecs.umich.edu" "planetlab01.cs.washington.edu")
+while [ 1 ]; do
+    date
+    for i in "${hostName[@]}"
+     do
+    printf "\n"
+    printf "Ping from planetlab-n1.wand.net.nz:"
+    ping -c 20 $i
+    printf "\n"	
+    printf "Traceroute from planetlab-n1.wand.net.nz:"
+    traceroute $i
+    done
+      sleep 1200
+done
+
+chmod +x my_script.sh
+
+setsid ./my_script.sh > node3_4_log.txt
+
+
+
+
+
+
+
+
